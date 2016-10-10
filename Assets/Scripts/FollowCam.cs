@@ -5,7 +5,7 @@ public class FollowCam : MonoBehaviour
 {
     static public FollowCam S; // a follow cam singleton
     //fields set in Unity inspector pane
-    public float easing = 0.05f;
+    public float easing = 0.01f;
     public Vector2 minXY;
     public bool ______________________;
 
