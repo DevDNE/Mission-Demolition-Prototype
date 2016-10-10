@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Slingshot : MonoBehaviour
 {
+    static public Slingshot S;
+
     //fields set in Unity inspector pane
     public GameObject prefabProjectile;
     public float velocityMult = 4f;
@@ -17,6 +19,8 @@ public class Slingshot : MonoBehaviour
 
     void Awake()
     {
+        //Set the slingshot singleton S
+        S = this;
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
@@ -63,7 +67,12 @@ public class Slingshot : MonoBehaviour
         Vector3 mouseDelta = mousePos3D - launchPos;
         //Limit mouseDelta to the radius of the Slingshot SphereCollider
         float maxMagnitude = this.GetComponent<SphereCollider>().radius;
-        
+        if (mouseDelta.magnitude > maxMagnitude)
+        {
+            mouseDelta.Normalize();
+            mouseDelta *= maxMagnitude;
+        }
+
         if (Input.GetMouseButtonUp(0))
         {
             //The mouse has been released
