@@ -294,7 +294,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011440798386, guid: 46548bf81b0f9de4cad5f4849e99d9e1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9.5
+      value: -43.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011440798386, guid: 46548bf81b0f9de4cad5f4849e99d9e1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabProjectile: {fileID: 1000010446183532, guid: 03aff3cdd5984c24ebf4ea61b4a08e61,
     type: 2}
-  velocityMult: 10
+  velocityMult: 13
   ______________________: 0
   launchPoint: {fileID: 0}
   launchPos: {x: 0, y: 0, z: 0}
@@ -583,7 +583,7 @@ MonoBehaviour:
   - {fileID: 1000012386304898, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
   - {fileID: 1000013313509398, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
   cloudPosMin: {x: -50, y: -5, z: 10}
-  cloudPosMax: {x: 150, y: 100, z: 10}
+  cloudPosMax: {x: 150, y: 100, z: -10}
   cloudScaleMin: 1
   cloudScaleMax: 5
   cloudSpeedMult: 0.5
@@ -601,9 +601,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castles:
-  - {fileID: 864451906}
-  - {fileID: 864451906}
-  - {fileID: 864451906}
   - {fileID: 864451906}
   gtLevel: {fileID: 939523400}
   gtShots: {fileID: 2067650859}
