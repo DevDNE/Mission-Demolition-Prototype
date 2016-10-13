@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public enum GameMode
 {
@@ -12,8 +13,8 @@ public class MissionDemolition : MonoBehaviour
 
     // fields set in the Unity Inspector pane
     public GameObject[] castles;   // An array of the castles
-    public GUIText gtLevel;   // The GT_Level GUIText
-    public GUIText gtScore;   // The GT_Score GUIText
+    public Text gtLevel;   // The GT_Level GUIText
+    public Text gtShots;   // The GT_Score GUIText
     public Vector3 castlePos; // The place to put castles
     public bool _____________________________;
     // fields set dynamically
@@ -30,7 +31,7 @@ public class MissionDemolition : MonoBehaviour
         level = 0;
         levelMax = castles.Length;
         StartLevel();
-    }
+}
 
     void StartLevel() {
         // Get rid of the old castle if one exists
@@ -53,19 +54,14 @@ public class MissionDemolition : MonoBehaviour
         ProjectileLine.S.Clear();
         // Reset the goal        
         Goal.goalMet = false;
-        ShowGT(); mode = GameMode.playing;
-    }
-
-    void ShowGT()
-    {
-        // Show the data in the GUITexts        
-        gtLevel.text = "Level: "+(level+1)+" of "+levelMax;
-        gtScore.text = "Shots Taken: "+shotsTaken;
+        gtLevel.text = "Level: " + (level+1) + " of " + levelMax;
+        gtShots.text = "Shots Taken: " + shotsTaken;
     }
 
     void Update()
     {
-        ShowGT();
+        gtLevel.text = "Level: " + (level + 1) + " of " + levelMax;
+        gtShots.text = "Shots Taken: " + shotsTaken;
         // Check for level end        
         if (mode == GameMode.playing && Goal.goalMet)
         {
