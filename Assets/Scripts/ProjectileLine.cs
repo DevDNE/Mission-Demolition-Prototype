@@ -74,9 +74,11 @@ public class ProjectileLine : MonoBehaviour {
             line.SetPosition(1, points[1]);
             //Enables the LineRenderer
             line.enabled = true;
-        } else
+        }
+        else
         {
             //Normal behavior of adding a point
+            points.Add(pt);
             line.SetVertexCount(points.Count);
             line.SetPosition(points.Count - 1, lastPoint);
             line.enabled = true;
@@ -100,7 +102,7 @@ public class ProjectileLine : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        if (poi ==null)
+        if (poi == null)
         {
             //if there is no poi, search for one
             if (FollowCam.S.poi != null)
@@ -108,11 +110,13 @@ public class ProjectileLine : MonoBehaviour {
                 if (FollowCam.S.poi.tag == "Projectile")
                 {
                     poi = FollowCam.S.poi;
-                } else
+                }
+                else
                 {
                     return; // Return if we didnt find a poi
                 }
-            } else
+            }
+            else
             {
                 return; // Return of we didnt find a poi
             }

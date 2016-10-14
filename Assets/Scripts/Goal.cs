@@ -5,6 +5,7 @@ public class Goal : MonoBehaviour
 {
     //A static field accessible by code anywhere
     static public bool goalMet = false;
+
     void OnTriggerEnter(Collider other)
     {
         //When the Trigger is hit by something
