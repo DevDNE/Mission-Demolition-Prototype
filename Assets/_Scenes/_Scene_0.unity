@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
+  m_IndirectSpecularColor: {r: 0.21337813, g: 0.2151939, b: 0.21767816, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabProjectile: {fileID: 1000010446183532, guid: 03aff3cdd5984c24ebf4ea61b4a08e61,
     type: 2}
-  velocityMult: 13
+  velocityMult: 10
   ______________________: 0
   launchPoint: {fileID: 0}
   launchPos: {x: 0, y: 0, z: 0}
@@ -582,8 +582,8 @@ MonoBehaviour:
   - {fileID: 1000011793571624, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
   - {fileID: 1000012386304898, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
   - {fileID: 1000013313509398, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-  cloudPosMin: {x: -50, y: -5, z: 10}
-  cloudPosMax: {x: 150, y: 100, z: -10}
+  cloudPosMin: {x: -50, y: 5, z: -800}
+  cloudPosMax: {x: 150, y: 120, z: -800}
   cloudScaleMin: 1
   cloudScaleMax: 5
   cloudSpeedMult: 0.5
@@ -1006,48 +1006,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
---- !u!1001 &1731458380
-Prefab:
+--- !u!1 &1661856944
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000013188403864, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 7.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013188403864, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 12.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013188403864, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013188403864, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013188403864, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013188403864, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013188403864, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013188403864, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 89855c3ad848eda44959641f71f9bdc4, type: 2}
-  m_IsPrefabParent: 0
+  m_PrefabParentObject: {fileID: 1000011872655546, guid: 89855c3ad848eda44959641f71f9bdc4,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1661856945}
+  m_Layer: 0
+  m_Name: CloudAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661856945
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000013188403864, guid: 89855c3ad848eda44959641f71f9bdc4,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661856944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: -10, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &1771049642
 GameObject:
   m_ObjectHideFlags: 0
